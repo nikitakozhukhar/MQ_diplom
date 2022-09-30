@@ -47,7 +47,7 @@ body {
 .header {
 	padding: 19px 0px 57px 51px;
 
-	background: url(/img/banner-bg.jpg) no-repeat top 0px left 10px/ cover #000000;
+	background: url(img/banner-bg.jpg) no-repeat top 0px left 10px/ cover #000000;
 	position: relative;
 
 	z-index: 1;
