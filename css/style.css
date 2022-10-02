@@ -616,6 +616,102 @@ body {
 
 /*------------------------------------------------*/
 
+/*Стилизация блока "Наши изделия"*/
+
+.products {
+	display: flex;
+	flex-direction: column;
+    margin: 0 auto;
+	
+}
+
+.product-title {
+	position: relative;
+	margin: -2px -8px 42px 0;
+
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.product-title::after {
+	content: "";
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: 27px;
+	
+	width: 66px;
+	height: 3px;
+	
+	background: #e1d9bd;
+}
+.products-cards {
+	display: flex;
+	align-items: flex-end;
+	gap: 70px;
+}
+.product-card {
+	display: flex;
+	flex-direction: column;
+	
+	width: 33.3%;
+	box-sizing: border-box;
+	
+}
+.product-card-image {
+	align-self: center;
+}
+
+.product-card-title {
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	text-transform: uppercase;
+}
+.product-card-discription {
+	padding: 10px;
+	width: 300px;
+	font-size: 15px;
+	text-align: left;
+}
+
+.product-card-link {
+	color: #b59f5b;
+}
+.product-card-price {
+	display: flex;
+    justify-content: space-between;
+    padding: 110px 20px 20px 20px;
+    margin-top: -120px;
+    border: 3px solid #b59f5b;
+}
+.product-price {
+}
+.old-price {
+	font-size: 14px;
+	text-decoration: line-through;
+}
+.new-price {
+	font-size: 20px;
+	font-weight: 700;
+}
+.store {
+	background-color: #b59f5b;
+	padding: 16px 25px;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.store:hover {
+	background-color: #323232;
+}
+
+/*------------------------------------------------*/
 /* Стилизация футера */
 .footer {
 	text-align: center;
