@@ -48,7 +48,7 @@ body {
 .header {
 	padding: 19px 0px 57px 51px;
 
-	background: url(img/banner-bg.jpg) no-repeat top 0px left 10px/ cover #000000;
+	background: url("img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
 	position: relative;
 
 	z-index: 1;
@@ -252,16 +252,16 @@ body {
 }
 
 .trend1 {
-	background: url(img/trend1.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url("img/trend1.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 .trend2 {
-	background: url(img/trend2.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url("img/trend2.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 .trend3 {
-	background: url(img/trend3.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url("img/trend3.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 .trend4 {
-	background: url(img/trend4.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url("img/trend4.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 
 .trend-item::after {
