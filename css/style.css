@@ -48,7 +48,7 @@ body {
 .header {
 	padding: 19px 0px 57px 51px;
 
-	background: url(img/banner-bg.jpg) no-repeat top 0px left 10px/ cover #000000;
+	background: url(/img/banner-bg.jpg) no-repeat top 0px left 10px/ cover #000000;
 	position: relative;
 
 	z-index: 1;
@@ -232,7 +232,6 @@ body {
 
 .trends-items {
 	display: flex;
-	justify-content: space-between;
 	position: relative;
 }
 
@@ -241,24 +240,28 @@ body {
 
 	display: flex;
 	align-items: flex-end;
-	flex: 0 1 410px;
+	flex: 0 1 25%;
 	
 	min-height: 318px;
 	
 	z-index: 1;
 }
 
+.trend-item:nth-child(n + 2) {
+	margin-left: 5px;
+}
+
 .trend1 {
-	background: url(img/trend1.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url(/img/trend1.jpg) no-repeat top 0px left 0px/ cover #000000;
 }
 .trend2 {
-	background: url(img/trend2.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url(/img/trend2.jpg) no-repeat top 0px left 0px/ cover #000000;
 }
 .trend3 {
-	background: url(img/trend3.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url(/img/trend3.jpg) no-repeat top 0px left 0px/ cover #000000;
 }
 .trend4 {
-	background: url(img/trend4.jpg) no-repeat top 0px left 0px/ cover #000000;
+	background: url(/img/trend4.jpg) no-repeat top 0px left 0px/ cover #000000;
 }
 
 .trend-item::after {
@@ -273,15 +276,16 @@ body {
 	z-index: -1;
 }
 
-.trend-item:nth-child(n + 2) {
+/* .trend-item:nth-child(n + 2) {
 	margin-left: 14px;
-}
+} */
 
 .trend-about {
 	border: 3px solid #b59f5b;
 	
 	padding: 39px 42px 37px 35px;
-    margin: 15px;
+  margin-left: 15px;
+	margin-right: 15px;
 }
 
 .trend-about:nth-child(n+2) {
@@ -722,12 +726,13 @@ h2 .trend-title-link {
 	display: flex;
 	flex-direction: column;
   margin-bottom: 5px;
-	
+	width: 100%;
+	border: 1px solid;
 }
 
 .product-title {
 	position: relative;
-	margin: -3px -115px 42px 0;
+	margin: -4px -17px 42px 0;
 
 	font-size: 20px;
 	text-align: center;
@@ -747,18 +752,20 @@ h2 .trend-title-link {
 	
 	background: #e1d9bd;
 }
+
 .products-cards {
 	display: flex;
-	align-items: flex-end;
-	gap: 5%;
+	justify-content: space-between;
 }
+
+
 .product-card {
 	display: flex;
 	flex-direction: column;
-	
+	flex-basis: 342px;
 	box-sizing: border-box;
-	
 }
+
 .product-card-image {
 	align-self: center;
 }
@@ -779,8 +786,7 @@ h2 .trend-title-link {
 } */
 
 .product-card-discription {
-	padding: 10px;
-	width: 300px;
+	
 	font-size: 15px;
 	text-align: left;
 }
@@ -791,11 +797,11 @@ h2 .trend-title-link {
 
 .product-card-price {
 	display: flex;
-	flex-direction: column;
-	flex-basis: 203px;
-	padding: 42px 22px 20px 20px;
-	margin-top: -38px;
-	border: 3px solid #b59f5b;
+  flex-direction: column;
+  flex-basis: 203px;
+  padding: 35px 16px 20px 10px;
+  margin-top: -30px;
+  border: 3px solid #b59f5b;
 }
 .product-price {
 	display: flex;
