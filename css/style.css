@@ -48,7 +48,7 @@ body {
 .header {
 	padding: 19px 0px 57px 51px;
 
-	background: url("img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
+	background: url("/img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
 	position: relative;
 
 	z-index: 1;
@@ -132,7 +132,7 @@ body {
 
 /*-------------------------------------------------*/
 
-/*Стилизация блока трендов*/
+/*Стилизация блока Попап*/
 .main {
 	flex: 1 1 auto;
 	/* для того чтобы прижать футер к низу */
@@ -159,10 +159,13 @@ body {
     padding: 50px 30px;
     margin: auto;
     background-color: #ffffff;
+	box-sizing: border-box;
     position: relative;
 }
 
 .feed-back {
+	margin: 0 auto;
+	text-align: left;
     background-color: #fff;
     color: #000000;
 }
@@ -195,20 +198,88 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+	padding-bottom: 34px;
 }
 
+.feed-back__radio {
+	padding-right: 10px;
+}
+
+.feed-back__question {
+	font-family: open-sasn, sans-serif;
+	font-size: 14px;
+}
+
+.textarea {
+	min-width: 100%;
+	
+}
+
+.textarea-field {
+	min-width: 100%;
+	padding: 20px 20px 20px 20px;
+	height: 127px;
+	resize: none;
+	border: none;
+	background-color: #f3f7f6;
+	font-family: open-sasn, sans-serif;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+.feed-back__question {
+	padding-bottom: 15px;
+}
+
+.feed-back__radio-custom {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.feed-back__radio-custom::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border: 1px solid #000000;
+}
+
+.select {
+	min-width: 100%;
+	padding: 18px 18px 18px 18px;
+	background: url("/svg/form-arrows.svg") right 5px center/ 3% no-repeat #f9f9f9;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.feed-back__button {
+	background-color: #b59f5b;
+	width: 100%;
+	padding: 16px 31px;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.feed-back__button:hover {
+	background-color: #323232;
+}
 .popup_hidden {
 	display: none;
 }
+
+/*----------------------------------------*/
+
+/*Стилизация блока трендов*/
 .trends {
-	
-	width: 101%;
+	width: 100%;
 	margin-bottom: 65px;
 }
 
 .trends-title {
 	position: relative;
-	padding: 0px 0px 42px 0px;
+	padding: 0px 0px 42px 15px;
 
 	font-size: 20px;
 	text-align: center;
@@ -232,7 +303,8 @@ body {
 
 .trends-items {
 	display: flex;
-	position: relative;
+	justify-content: space-between;
+    gap: 5px;
 }
 
 .trend-item {
@@ -245,23 +317,6 @@ body {
 	min-height: 318px;
 	
 	z-index: 1;
-}
-
-.trend-item:nth-child(n + 2) {
-	margin-left: 5px;
-}
-
-.trend1 {
-	background: url("img/trend1.jpg") no-repeat top 0px left 0px/ cover #000000;
-}
-.trend2 {
-	background: url("img/trend2.jpg") no-repeat top 0px left 0px/ cover #000000;
-}
-.trend3 {
-	background: url("img/trend3.jpg") no-repeat top 0px left 0px/ cover #000000;
-}
-.trend4 {
-	background: url("img/trend4.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 
 .trend-item::after {
@@ -277,15 +332,30 @@ body {
 }
 
 /* .trend-item:nth-child(n + 2) {
-	margin-left: 14px;
+	margin-left: 5px;
 } */
 
+.trend1 {
+	background: url("/img/trend1.jpg") no-repeat top 0px left 0px/ cover #000000;
+}
+.trend2 {
+	background: url("/img/trend2.jpg") no-repeat top 0px left 0px/ cover #000000;
+}
+.trend3 {
+	background: url("/img/trend3.jpg") no-repeat top 0px left 0px/ cover #000000;
+}
+.trend4 {
+	background: url("/img/trend4.jpg") no-repeat top 0px left 0px/ cover #000000;
+}
+
 .trend-about {
-	border: 3px solid #b59f5b;
-	
 	padding: 39px 42px 37px 35px;
-  margin-left: 15px;
-	margin-right: 15px;
+  	margin: 0px 15px 15px 15px;
+	border: 3px solid #b59f5b;
+}
+
+.trend-about_p {
+	padding: 39px 73px 37px 35px;
 }
 
 .trend-about:nth-child(n+2) {
@@ -348,7 +418,7 @@ h2 .trend-title-link {
 
 .post-list {
 	margin-left: -9px;
-	margin-right: 116px;
+	margin-right: 9.7%;
 	width: 67.8%;
 }
 
@@ -763,7 +833,12 @@ h2 .trend-title-link {
 	display: flex;
 	flex-direction: column;
 	flex-basis: 342px;
+	margin-left: 25px;
 	box-sizing: border-box;
+}
+
+.product-card:nth-child(n + 3) {
+	margin-right: 12px;
 }
 
 .product-card-image {
@@ -771,7 +846,8 @@ h2 .trend-title-link {
 }
 
 .product-card-title {
-	padding-top: 10px;
+	padding-top: 13px;
+	padding-bottom: 3px;
 	font-size: 20px;
 	text-align: left;
 	text-transform: uppercase;
@@ -786,9 +862,10 @@ h2 .trend-title-link {
 } */
 
 .product-card-discription {
-	
+	padding-bottom: 20px;
 	font-size: 15px;
 	text-align: left;
+	line-height: 1.5;
 }
 
 .product-card-link {
@@ -797,27 +874,32 @@ h2 .trend-title-link {
 
 .product-card-price {
 	display: flex;
-  flex-direction: column;
-  flex-basis: 203px;
-  padding: 35px 16px 20px 10px;
-  margin-top: -30px;
-  border: 3px solid #b59f5b;
+  	flex-direction: column;
+  	flex-basis: 203px;
+  	padding: 35px 16px 20px 19px;
+  	margin-top: -33px;
+ 	border: 3px solid #b59f5b;
 }
+
 .product-price {
 	display: flex;
 	justify-content: space-between;
+	align-items: end;
 }
+
 .old-price {
 	font-size: 14px;
 	text-decoration: line-through;
 }
+
 .new-price {
 	font-size: 20px;
 	font-weight: 700;
 }
+
 .store {
 	background-color: #b59f5b;
-	padding: 16px 25px;
+	padding: 16px 31px;
 	border: none;
 	cursor: pointer;
 	font-size: 14px;
