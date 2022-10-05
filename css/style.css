@@ -20,14 +20,14 @@ a {
 
 @font-face {
 	font-family: open-sans;
-	src: url(/fonts/OpenSans-Regular.woff);
+	src: url(../fonts/OpenSans-Regular.woff);
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: open-sans;
-	src: url(/fonts/OpenSans-Bold.woff);
+	src: url(../fonts/OpenSans-Bold.woff);
 	font-weight: 700;
 	font-style: normal;
 }
@@ -48,7 +48,7 @@ body {
 .header {
 	padding: 19px 0px 57px 51px;
 
-	background: url("/img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
+	background: url("../img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
 	position: relative;
 
 	z-index: 1;
@@ -67,7 +67,7 @@ body {
 }
 
 .content {
-	width: 1200px;
+	max-width: 1200px;
 
 	padding: 0 15px;
 	margin: 0 auto;
@@ -93,6 +93,56 @@ body {
 	display: flex;
 	margin-right: 33px;
 	margin-bottom: 3px;
+}
+@media (min-width: 1200px) {
+	.burger-menu {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	
+	.menu-list {
+		display: none;
+	}
+	.burger-menu {
+		width: 1.4em;
+		height: 1em;
+		border: none;
+		margin-right: 5px;
+		background-color: transparent;
+		font-size: 20px;
+		position: relative;
+		text-indent: -9999px;
+		cursor: pointer;
+	}
+	.burger-menu-item {
+		width: 82%;
+		height: 16%;
+		margin-top: -0.1em;
+		background-color: #ffffff;
+		position: absolute;
+		left: 0;
+		top: 50%;
+	}
+
+	.burger-menu:before {
+		top: 0;
+	}
+	.burger-menu:after {
+		bottom: 0;
+	}
+
+	.burger-menu:before,
+	.burger-menu:after{
+		content: "";
+		width: 82%;
+		height: 16%;
+		background-color: #ffffff;
+		position: absolute;
+		left: 0;
+	}
+	
 }
 
 .menu-list-item:nth-child(n + 2) {
@@ -212,7 +262,6 @@ body {
 
 .textarea {
 	min-width: 100%;
-	
 }
 
 .textarea-field {
@@ -246,7 +295,7 @@ body {
 .select {
 	min-width: 100%;
 	padding: 18px 18px 18px 18px;
-	background: url("/svg/form-arrows.svg") right 5px center/ 3% no-repeat #f9f9f9;
+	background: url("../svg/form-arrows.svg") right 5px center/ 3% no-repeat #f9f9f9;
 	-webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -276,7 +325,10 @@ body {
 	width: 100%;
 	margin-bottom: 65px;
 }
-
+.trends-content {
+	width: 1200px;
+	padding: 0 15px 0 15px;
+}
 .trends-title {
 	position: relative;
 	padding: 0px 0px 42px 15px;
@@ -312,12 +364,23 @@ body {
 
 	display: flex;
 	align-items: flex-end;
-	flex: 0 1 25%;
-	
+	flex: 1 1 25%;
 	min-height: 318px;
-	
 	z-index: 1;
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	
+	.trends-items {
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.trend-item {
+		flex-basis: 49%;
+	}
+}
+
+
 
 .trend-item::after {
 	content: "";
@@ -336,16 +399,16 @@ body {
 } */
 
 .trend1 {
-	background: url("/img/trend1.jpg") no-repeat top 0px left 0px/ cover #000000;
+	background: url("../img/trend1.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 .trend2 {
-	background: url("/img/trend2.jpg") no-repeat top 0px left 0px/ cover #000000;
+	background: url("../img/trend2.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 .trend3 {
-	background: url("/img/trend3.jpg") no-repeat top 0px left 0px/ cover #000000;
+	background: url("../img/trend3.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 .trend4 {
-	background: url("/img/trend4.jpg") no-repeat top 0px left 0px/ cover #000000;
+	background: url("../img/trend4.jpg") no-repeat top 0px left 0px/ cover #000000;
 }
 
 .trend-about {
@@ -559,7 +622,7 @@ h2 .trend-title-link {
 }
 
 .side-bar-title-new-post {
-	margin: -2px -8px 47px 0;
+	margin: -4px -8px 47px 0;
 }
 
 .side-bar-title::after {
