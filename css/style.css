@@ -94,10 +94,13 @@ body {
 	margin-right: 33px;
 	margin-bottom: 3px;
 }
+
 @media (min-width: 1200px) {
+
 	.burger-menu {
 		display: none;
 	}
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -105,6 +108,7 @@ body {
 	.menu-list {
 		display: none;
 	}
+
 	.burger-menu {
 		width: 1.4em;
 		height: 1em;
@@ -175,7 +179,7 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	color: #ffffff;
-	font-size: 4.5rem;
+	font-size: 4rem;
 	line-height: 1.7;
 	font-weight: 700;
 }
@@ -477,11 +481,12 @@ h2 .trend-title-link {
 .content-main-aside {
 	display: flex;
 	flex-wrap: wrap;
+	
 }
 
 .post-list {
 	margin-left: -9px;
-	margin-right: 9.7%;
+	margin-right: 5%;
 	width: 67.8%;
 }
 
@@ -508,7 +513,22 @@ h2 .trend-title-link {
 
 	object-fit: contain;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
 
+	.post-list {
+		margin-right: 0;
+	}
+
+	.post-list-item {
+		flex-wrap: wrap;
+		width: 55vw;
+	}
+	.post-list-img {
+		margin-right: 0;
+		width: 55vw;
+		margin-bottom: 1em;
+	}
+}
 .category-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -607,6 +627,11 @@ h2 .trend-title-link {
 
 	box-sizing: border-box;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+	.side-bar {
+		width: 30vw;
+	}
+}
 
 /* Стили рубрики "Новые посты" и формы поиска */
 .latest-posts {
@@ -696,11 +721,18 @@ h2 .trend-title-link {
 	box-sizing: border-box;
 }
 
+
 .search-field:focus {
 	outline: none;
 	border: 1px solid #b59f5b;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+	.search-field {
+		width: 79%;
+		
+	}
+}
 /* \/ nрансформация placeholder \/ */
 
 :focus::-webkit-input-placeholder {
@@ -825,7 +857,16 @@ h2 .trend-title-link {
 	border: 3px solid #b59f5b;
 	text-shadow: 1px 1px #a4a3a4;
 }
-
+@media (min-width: 768px) and (max-width: 1199px) {
+	.tags-list-item {
+	margin: 1px 12px 13px 0px;
+    padding: 1px 4px;
+    border: 3px solid #ededed;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+	}
+}
 /*------------------------------------------------*/
 
 /* Стили раздела "Темы" */
@@ -860,7 +901,6 @@ h2 .trend-title-link {
 	flex-direction: column;
   margin-bottom: 5px;
 	width: 100%;
-	border: 1px solid;
 }
 
 .product-title {
