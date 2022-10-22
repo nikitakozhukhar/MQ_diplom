@@ -5,6 +5,7 @@
 
 html {
 	height: 100%;
+	overflow-x: hidden;
 	/*для того чтобы прижать футер к низу*/
 }
 
@@ -45,6 +46,7 @@ body {
 
 /* Стили Header для ПК*/
 .header {
+	width: 100vw;
 	padding: 19px 0px 55px 52px;
 
 	background: url("../img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
@@ -244,7 +246,8 @@ body {
 		width: 1.4em;
 		height: 1em;
 		border: none;
-		margin-right: 5px;
+		margin-right: 22px;
+		margin-bottom: 4px;
 		background-color: transparent;
 		font-size: 1.25rem;
 		position: relative;
@@ -299,7 +302,7 @@ body {
 
 	.intro {
 
-		padding: 32px 0px 63px 43px;
+		padding: 32px 16px 63px 43px;
 
 	}
 
@@ -343,13 +346,13 @@ body {
 	z-index: 10;
 }
 
-.popup::after {
+.popup-close {
 	content: "";
 	position: relative;
 	width: 20px;
 	height: 20px;
-	top: 11.8%;
-	right: 34%;
+	top: 13.6%;
+	left: 68%;
 	background: url(/svg/form-x.svg) no-repeat;
 }
 
@@ -487,9 +490,9 @@ body {
 	display: block;
 	position: absolute;
 	top: 3px;
-	left: -21px;
-	width: 12px;
-	height: 12px;
+	left: -20px;
+	width: 11px;
+	height: 11px;
 	border: 1px solid #b59f5b;
 	background-color: #b59f5b;
 	border-radius: 50%;
@@ -533,11 +536,11 @@ body {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-	.popup::after {
+	.popup-close {
 		width: 27px;
 		height: 27px;
-		top: 0%;
-		right: 26.6%;
+		top: 9.3%;
+    	left: 74.6%;
 	}
 
 	.feed-back__form {
@@ -630,11 +633,11 @@ body {
 		padding-bottom: 280px;
 	}
 
-	.popup::after {
+	.popup-close {
 		width: 25px;
 		height: 25px;
 		top: -5%;
-		right: 8%;
+		left: 90%;
 	}
 
 	.popup__container {
@@ -837,21 +840,21 @@ h2 .trend-title-link {
 	}
 
 	.trends-title {
-		padding: 0px 0px 32px 19px;
+		padding: 0px 5px 32px 19px;
 		font-size: 1.1rem;
 	}
 
 
 	.trend-about {
-		margin: 0px 10px 13px 26px;
-		padding: 26px 42px 45px 30px;
+		margin: 0px 20px 13px 20px;
+		padding: 26px 42px 43px 38px;
 		line-height: 1.1;
 		flex-grow: 1;
 	}
 
-	/* .trend-about_p {
-		padding: 32px 98px 44px 23px;
-	} */
+	.trend-about_p {
+		padding: 32px 98px 41px 28px;
+	}
 
 	.trend-link {
 		font-size: 0.875rem;
@@ -1062,13 +1065,13 @@ h2 .trend-title-link {
 	.post-list {
 		margin-left: -14px;
 		margin-right: 2px;
-		width: 63%;
+		width: 62%;
 	}
 
 	.post-list-item {
 		flex-wrap: wrap;
 		width: 51vw;
-		margin: -7px 0 67px 25px;
+		margin: -7px 0 45px 25px;
 		padding-bottom: 17px;
 		border-bottom: 3px solid #ededed;
 	}
@@ -1079,17 +1082,17 @@ h2 .trend-title-link {
 	}
 
 	.category-list {
-		margin-top: 4px;
+		margin-top: 6px;
 	}
 
 	.title {
-		margin: 11px 0px 35px -2px;
+		margin: 11px 0px 34px -2px;
 		padding-right: 0px;
 		font-size: 1.06rem;
 	}
 
 	.date-author {
-		margin-bottom: 30px;
+		margin-bottom: 29px;
 	}
 
 	.date-author-music {
@@ -1097,7 +1100,7 @@ h2 .trend-title-link {
 	}
 
 	.post-list-item-music {
-		margin: -7px 0 63px 26px;
+		margin: -7px 0 44px 26px;
 	}
 }
 
@@ -1421,20 +1424,24 @@ h2 .trend-title-link {
 
 @media (min-width: 641px) and (max-width: 1199px) {
 	.search-field {
-		width: 85%;
+		width: 83.2%;
 	}
 
 	.side-bar {
-		width: 35.3vw;
+		width: 36.6vw;
 	}
 
 	.side-bar-title-new-post {
-		margin: -4px -22px 44px 0;
+		margin: -3px 0px 44px 12px;
 	}
 
+	.mailing-title {
+		padding-left: 11px;
+	}
+	
 	.latest-posts {
 		margin-bottom: 57px;
-		margin-left: 5px;
+		margin-left: 12px;
 	}
 
 	.tags-list-item {
@@ -1443,7 +1450,7 @@ h2 .trend-title-link {
 	}
 
 	.latest-post-img {
-		margin-right: 15px;
+		margin-right: 18px;
 	}
 
 	.theme-list-item {
