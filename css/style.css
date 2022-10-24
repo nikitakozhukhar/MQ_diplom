@@ -5,7 +5,7 @@
 
 html {
 	height: 100%;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	/*для того чтобы прижать футер к низу*/
 }
 
@@ -46,7 +46,6 @@ body {
 
 /* Стили Header для ПК*/
 .header {
-	width: 100vw;
 	padding: 19px 0px 55px 52px;
 
 	background: url("../img/banner-bg.jpg") no-repeat top 0px left 10px/ cover #000000;
@@ -188,7 +187,7 @@ body {
 	}
 
 	.container {
-		padding: 26px 2px 54px 19px;
+		padding: 26px 2px 54px 17px;
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
 		align-items: end;
@@ -214,7 +213,7 @@ body {
 	.intro {
 		margin-top: -23px;
 		margin-right: 8px;
-		padding: 0px 0px 160px 24px;
+		padding: 0px 0px 160px 10px;
 
 	}
 
@@ -699,7 +698,7 @@ body {
 
 /*Стилизация блока трендов*/
 .trends {
-	width: 100%;
+	width: 100vw;
 	margin-bottom: 65px;
 }
 
@@ -710,7 +709,7 @@ body {
 
 .trends-title {
 	position: relative;
-	padding: 0px 0px 42px 20px;
+	margin-bottom: 42px;
 
 	font-size: 1.25rem;
 	text-align: center;
@@ -779,20 +778,20 @@ body {
 
 .trend-about {
 	flex-grow: 1;
-	padding: 36px 36px 36px 41px;
-	margin: 0px 15px 15px 15px;
+	padding: 36px 36px 37px 32px;
+	margin: 0px 21px 15px 21px;
 	border: 3px solid #b59f5b;
 }
 
 .trend-about_p {
-	padding: 39px 73px 37px 35px;
+	padding: 35px 72px 37px 30px;
 }
 
-.trend-about:nth-child(n+2) {
+/* .trend-about:nth-child(n+2) {
 
 	padding: 39px 64px 37px 35px;
 
-}
+} */
 
 .trend-list {
 	display: flex;
@@ -840,14 +839,16 @@ h2 .trend-title-link {
 	}
 
 	.trends-title {
-		padding: 0px 5px 32px 19px;
+		
+		margin-bottom: 0px;
+		padding: 0px 21px 32px 19px;
 		font-size: 1.1rem;
 	}
 
 
 	.trend-about {
 		margin: 0px 20px 13px 20px;
-		padding: 26px 42px 43px 38px;
+		padding: 29px 42px 43px 31px;
 		line-height: 1.1;
 		flex-grow: 1;
 	}
@@ -881,7 +882,8 @@ h2 .trend-title-link {
 
 	.trends-title {
 		margin-top: -19px;
-		padding: 0px 23px 35px 34px;
+		margin-bottom: 0px;
+		padding: 0px 36px 35px 34px;
 		font-size: 1em;
 	}
 
@@ -913,13 +915,13 @@ h2 .trend-title-link {
 	}
 
 	.trend-about {
-		padding: 30px 31px 25px 18px;
+		padding: 30px 29px 25px 18px;
 		margin: 0px 15px 18px 15px;
 		flex-grow: 1;
 	}
 
 	.trend-about_p {
-		padding: 27px 97px 25px 19px;
+		padding: 27px 90px 25px 19px;
 		margin-bottom: 15px;
 	}
 }
@@ -944,8 +946,8 @@ h2 .trend-title-link {
 
 .post-list {
 	margin-left: -9px;
-	margin-right: 5%;
-	width: 67.8%;
+    margin-right: calc(100% - 67.1% - 271px);
+    width: 67.2%;
 }
 
 .post-list-item {
@@ -1063,17 +1065,21 @@ h2 .trend-title-link {
 @media (min-width: 641px) and (max-width: 1199px) {
 
 	.post-list {
-		margin-left: -14px;
-		margin-right: 2px;
-		width: 62%;
+		margin-left: 0px;
+		margin-right: calc(100% - 62% - 271px);
+		width: 60%;
 	}
 
 	.post-list-item {
 		flex-wrap: wrap;
-		width: 51vw;
-		margin: -7px 0 45px 25px;
+		width: 51.9vw;
+		margin: -7px 0 45px 11px;
 		padding-bottom: 17px;
 		border-bottom: 3px solid #ededed;
+	}
+
+	.post-about {
+		padding-right: 1px;
 	}
 
 	.post-list-img {
@@ -1087,7 +1093,7 @@ h2 .trend-title-link {
 
 	.title {
 		margin: 11px 0px 34px -2px;
-		padding-right: 0px;
+		padding-left: 4px;
 		font-size: 1.06rem;
 	}
 
@@ -1098,9 +1104,12 @@ h2 .trend-title-link {
 	.date-author-music {
 		margin-bottom: 28px;
 	}
+	.text {
+		padding-right: 7px;
+	}
 
 	.post-list-item-music {
-		margin: -7px 0 44px 26px;
+		margin: -7px 0 44px 10px;
 	}
 }
 
@@ -1114,18 +1123,13 @@ h2 .trend-title-link {
 
 	.post-list-item {
 		width: 91vw;
-		margin: 40px 0px 57px 0px;
+		margin: 35px 0px 36px 0px;
 		padding-bottom: 17px;
 		flex-wrap: wrap;
 		border-bottom: 3px solid #ededed;
 	}
-
-	.post-list-item:nth-child(2) {
-		margin: 35px 0px 54px 0px;
-	}
-
-	.post-list-item:nth-child(4) {
-		margin: 55px 0px 52px 0px;
+	.post-list-item:nth-child(1) {
+		margin-top: 40px;
 	}
 
 	.post-list-img {
@@ -1423,43 +1427,74 @@ h2 .trend-title-link {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-	.search-field {
-		width: 83.2%;
-	}
-
+	
 	.side-bar {
-		width: 36.6vw;
+		
 	}
 
 	.side-bar-title-new-post {
-		margin: -3px 0px 44px 12px;
+		margin: -3px 0px 44px 5px;
 	}
 
 	.mailing-title {
-		padding-left: 11px;
+		padding-right: 9px;
 	}
 	
 	.latest-posts {
-		margin-bottom: 57px;
-		margin-left: 12px;
+		margin-bottom: 59px;
+		margin-left: 2px;
+	}
+
+	.latest-post-item {
+		margin-bottom: 21px;
+		padding-right: 0px;
+	}
+
+	.search {
+		margin-top: 62px;
+	}
+
+	.search-field {
+		width: 80%;
+	}
+
+	.email-field {
+		width: 97%;
+		margin-left: 2px;
+	}
+
+	.subscribe-btn {
+		width: 96.4%;
+		margin-left: 2px;
+		font-size: 0.85rem;
+		font-weight: 700;
+	}
+
+	.tags-title {
+		padding-right: 6px;
 	}
 
 	.tags-list-item {
-		margin: 0px 9px 6px 14px;
-		padding: 2px 5px;
+		margin: 0px 9px 6px 4px;
+    	padding: 1px 11px 3px 9px;
 	}
 
 	.latest-post-img {
 		margin-right: 18px;
 	}
 
+	.side-bar-title-themes {
+		padding-right: 5px;
+	}
+
 	.theme-list-item {
 		padding: 12px 4px;
 	}
 
-	/* .subscribe-btn {
-		margin-left: 7px;
-	} */
+	.theme-list-item:nth-child(4) {
+
+	}
+	
 
 }
 
@@ -1470,7 +1505,7 @@ h2 .trend-title-link {
 	}
 
 	.side-bar-title-new-post {
-		margin: 5px 0px 40px 0px;
+		margin: 4px 0px 40px 0px;
 		font-size: 1em;
 	}
 
@@ -1484,7 +1519,7 @@ h2 .trend-title-link {
 	}
 
 	.search-field {
-		width: 85%;
+		width: calc(100% - 48px);
 	}
 
 	.side-bar-title {
@@ -1526,6 +1561,9 @@ h2 .trend-title-link {
 .products {
 	display: flex;
 	flex-direction: column;
+	max-width: 1200px;
+	padding: 0 30px;
+    margin: 0 auto;
 	margin-bottom: 5px;
 	width: 100%;
 }
@@ -1569,7 +1607,7 @@ h2 .trend-title-link {
 }
 
 .product-card:nth-child(n + 3) {
-	margin-right: 5px;
+	margin-right: 8px;
 }
 
 .product-card-image {
@@ -1603,9 +1641,10 @@ h2 .trend-title-link {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	padding: 36px 21px 20px 19px;
+	padding: 36px 21px 24px 21px;
 	margin-top: -33px;
-	margin-right: -2px;
+	margin-right: -4px;
+    margin-left: -4px;
 	border: 3px solid #b59f5b;
 }
 
@@ -1642,19 +1681,24 @@ h2 .trend-title-link {
 
 @media (min-width: 641px) and (max-width: 1199px) {
 
+	.products {
+		padding: 0;
+	}
 	.products-cards {
-		justify-content: space-between;;
+		justify-content: space-between;
+		margin-left: 11px;
+    	margin-right: 62px;
 	}
 
 	.product-title {
-		margin: -3px -21px 42px 0;
+		padding-right: 20px;
+		margin: 0px -21px 42px 0;
 		font-size: 1.1rem;
 	}
-
-	.product-card {
-		flex-basis: 33vw;
-		margin-left: 14px;
+	.product-title::after {
+		right: 20px;
 	}
+
 
 	.product-card:nth-child(2) {
 		margin-left: 50px;
@@ -1680,7 +1724,7 @@ h2 .trend-title-link {
 		margin-right: -24px;
 	}
 
-	.product-card-price-last {
+	.product-card-price-frame {
 		flex-basis: 186px;
 		padding: 37px 13px 18px 19px;
 		margin-top: -41px;
@@ -1690,11 +1734,12 @@ h2 .trend-title-link {
 @media (max-width: 640px) {
 	.products {
 		width: 92vw;
+		padding: 0;
 	}
 
 	.product-title {
-		
-		margin: 49px 0px 38px 13px;
+		padding-left: 2px;
+		margin: 49px 0px 38px -2px;
 		font-size: 1rem;
 	}
 	.products-cards {
@@ -1704,31 +1749,33 @@ h2 .trend-title-link {
 	}
 
 	.product-card {
+		margin-right: 16px;
 		margin-left: 0px;
-		margin-bottom: 21px;
+		margin-bottom: 22px;
 	}
 
-	.product-card:nth-child(n + 2) {
-		margin-bottom: 31px;
-	}
-
+	
 	.product-card-image {
 		margin-left: 19px;
 	}
 
 	.product-card-price {
-		flex-basis: 167px;
-		padding: 32px 21px 21px 17px;
-		margin-right: -30px;
+		/* flex-basis: 167px; */
+		padding: 28px 21px 28px 17px;
+		margin-right: -23px;
 	}
 
 	.product-card-title {
-		padding-top: 17px;
+		padding-top: 20px;
 		font-size: 1.06rem;
 	}
 
 	.product-card-title_doll {
-		padding-top: 11px;
+		padding-top: 21px;
+	}
+
+	.product-card-price-last-frame {
+		padding-top: 19px;
 	}
 
 	.product-card-discription {
@@ -1752,7 +1799,7 @@ h2 .trend-title-link {
 	justify-content: center;
 
 	margin-left: 24px;
-	padding: 31px 15px;
+	padding: 37px 15px;
 
 	background: #f4f7f6;
 }
@@ -1781,26 +1828,40 @@ h2 .trend-title-link {
 }
 
 .copyright {
-	margin: 72px -32px 41px 0;
+	margin: 68px 0px 41px 30px;
 
 	font-size: 0.75rem;
 	letter-spacing: 0.2px;
 	color: #999999;
 }
 
+@media (min-width: 641px) and (max-width: 1199px) {
+	.social-list-item {
+		margin-top: 0px;
+		margin-left: 2px;
+	}
+
+	.socials-list {
+		margin-left: 5px;
+	}
+	.copyright {
+		margin: 42px -10px 41px 0;
+	}
+}
+
 @media (max-width: 640px) {
 	.footer {
-		margin-top: -40px;
+		margin-top: -35px;
 	}
 
 	.socials-list {
 		width: 100%;
 		margin-left: 0px;
-		padding: 19px 14px;
+		padding: 19px 2px;
 	}
 
 	.copyright {
-		margin: 61px 0px 41px 28px;
+		margin: 61px 0px 41px 8px;
 	}
 }
 
