@@ -1,9 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-
-		outline: 1px solid red;
-
 }
 
 html {
@@ -409,15 +406,6 @@ body {
 	padding-bottom: 41px;
 }
 
-/* .feed-back__radio {
-	padding-right: 10px;
-}
-
-.feed-back__question {
-	font-family: open-sasn, sans-serif;
-	font-size: 0.875rem;
-} */
-
 .textarea {
 	min-width: 100%;
 }
@@ -454,7 +442,6 @@ body {
 .radio {
 	position: relative;
 	margin-right: 37px;
-
 }
 
 .feed-back__radio-input {
@@ -537,8 +524,8 @@ body {
 	.popup-close {
 		width: 27px;
 		height: 27px;
-		top: 9.3%;
-    	left: 74.6%;
+		top: -5.7%;
+    left: 74.6%;
 	}
 
 	.feed-back__form {
@@ -557,7 +544,8 @@ body {
 	}
 
 	.popup {
-		padding-top: 151px;
+		padding-top: 232px;
+		padding-right: 50px;
 	}
 
 	.feed-back__title::after {
