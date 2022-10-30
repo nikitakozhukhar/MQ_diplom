@@ -1578,10 +1578,9 @@ h2 .trend-title-link {
 	display: flex;
 	flex-direction: column;
 	max-width: 1200px;
-	padding: 0 30px;
+	padding: 0 15px;
 	margin: 0 auto;
 	margin-bottom: 5px;
-	width: 100%;
 }
 
 .product-title {
@@ -1609,7 +1608,7 @@ h2 .trend-title-link {
 
 .products-cards {
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	justify-content: space-between;
 }
 
@@ -1695,6 +1694,8 @@ h2 .trend-title-link {
 	background-color: #323232;
 }
 
+
+
 @media (min-width: 641px) and (max-width: 1199px) {
 
 	.products {
@@ -1702,7 +1703,7 @@ h2 .trend-title-link {
 	}
 
 	.products-cards {
-		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-left: 11px;
 		margin-right: 62px;
 	}
@@ -1728,10 +1729,6 @@ h2 .trend-title-link {
 	.product-card:nth-child(n + 3) {
 		margin-top: 28px;
 	}
-
-	/* .product-card-image {
-		margin-left: 18px;
-	} */
 
 	.product-img {
 		margin-left: 18px;
@@ -1788,15 +1785,11 @@ h2 .trend-title-link {
 		margin-bottom: 22px;
 	}
 
-
 	.product-card-image {
 		margin-left: 19px;
 	}
 
-
-
 	.product-card-price {
-		/* flex-basis: 167px; */
 		padding: 28px 21px 28px 17px;
 		margin-right: -23px;
 	}
