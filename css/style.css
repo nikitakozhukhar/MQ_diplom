@@ -334,8 +334,8 @@ body {
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 120px;
+	padding-bottom: 0px;
 	background-color: rgba(0, 0, 0, 0.6);
 	overflow-y: auto;
 	position: fixed;
@@ -350,14 +350,14 @@ body {
 	position: relative;
 	width: 20px;
 	height: 20px;
-	top: 13.6%;
-	left: 68%;
+	top: -55px;
+	left: 105%;
 	background: url(../svg/form-x.svg) no-repeat;
 }
 
 .popup__container {
-	max-width: 33vw;
-	padding: 50px 30px;
+	max-width: 23vw;
+	padding: 29px 30px 25px 31px;
 	margin: auto;
 	background-color: #ffffff;
 	box-sizing: border-box;
@@ -365,7 +365,7 @@ body {
 }
 
 .feed-back__form {
-	margin-left: 9px;
+	margin-left: -3px;
 }
 
 .feed-back {
@@ -407,17 +407,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-bottom: 41px;
+	padding-bottom: 23px;
 }
-
-/* .feed-back__radio {
-	padding-right: 10px;
-}
-
-.feed-back__question {
-	font-family: open-sasn, sans-serif;
-	font-size: 0.875rem;
-} */
 
 .textarea {
 	min-width: 100%;
@@ -440,14 +431,15 @@ body {
 }
 
 .feed-back__question {
-	margin-bottom: 9px;
+	margin-bottom: 4px;
+	margin-top: 13px;
 	padding-right: 10px;
 	font-size: 0.81rem;
 }
 
 .radio-flex {
 	display: flex;
-	padding-left: 33px;
+	padding-left: 24px;
 	margin-bottom: -15px;
 
 }
@@ -535,36 +527,38 @@ body {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
+
+	.popup {
+		padding-top: 227px;
+		padding-right: 23px;
+	}
+
+	.popup__container {
+		max-width: 50vw;
+		padding: 33px 30px;
+	}
+
 	.popup-close {
 		width: 27px;
 		height: 27px;
 		top: -72px;
-		left: 97%;
+		left: 102%;
+	}
+
+	.feed-back__title {
+		margin-top: -13px;
+		padding-right: 9px;
+		font-size: 1.1rem;
+	}
+
+	.feed-back__title::after {
+		left: -10px;
+		top: 31px;
+		width: 65px;
 	}
 
 	.feed-back__form {
 		margin-left: -6px;
-	}
-
-	.feed-back__title {
-		margin-top: -12px;
-		padding-right: 33px;
-		font-size: 1.1rem;
-	}
-
-	.popup__container {
-		max-width: 52vw;
-		padding: 37px 30px;
-	}
-
-	.popup {
-		padding-top: 235px;
-	}
-
-	.feed-back__title::after {
-		left: -31px;
-		top: 31px;
-		width: 65px;
 	}
 
 	.feed-back__content {
@@ -577,13 +571,21 @@ body {
 	}
 
 	.select {
-		padding: 15px 32px 15px 17px;
+		padding: 16px 32px 15px 21px;
 		font-size: 0.825rem;
 		background: url(../svg/form-arrows.svg) right 7px center/ 10px no-repeat #f3f7f6;
 	}
 
 	.feed-back__column {
 		padding-bottom: 27px;
+	}
+
+	.feed-back__column:nth-child(1) {
+		padding-bottom: 27px;
+	}
+
+	.feed-back__column:nth-child(2) {
+		margin-top: 1px;
 	}
 
 	.radio-flex {
@@ -641,8 +643,8 @@ body {
 
 	.popup__container {
 		padding: 7px 27px;
-    	max-width: 91vw;
-    	margin: 0 auto;
+		max-width: 91vw;
+		margin: 0 auto;
 	}
 
 	.feed-back__title {
@@ -652,14 +654,14 @@ body {
 
 	.feed-back__title::after {
 		left: -10px;
-    	top: 31px;
-    	width: 66px;
+		top: 31px;
+		width: 66px;
 	}
 
-	.feed-back__form{
+	.feed-back__form {
 		margin-left: -8px;
 	}
-    
+
 	.feed-back__column {
 		padding-bottom: 31px;
 	}
@@ -702,7 +704,7 @@ body {
 
 /*Стилизация блока трендов*/
 .trends {
-	width: 100vw;
+	width: 100%;
 	margin-bottom: 65px;
 }
 
@@ -726,7 +728,7 @@ body {
 	position: absolute;
 	margin: auto;
 	right: 0;
-	left: 16px;
+	left: 5px;
 	top: 32px;
 
 	width: 66px;
@@ -782,7 +784,7 @@ body {
 
 .trend-about {
 	flex-grow: 1;
-	padding: 36px 36px 37px 32px;
+	padding: 36px 17px 37px 32px;
 	margin: 0px 21px 15px 21px;
 	border: 3px solid #b59f5b;
 }
@@ -843,7 +845,7 @@ h2 .trend-title-link {
 	}
 
 	.trends-title {
-		
+
 		margin-bottom: 0px;
 		padding: 0px 21px 32px 19px;
 		font-size: 1.1rem;
@@ -950,8 +952,8 @@ h2 .trend-title-link {
 
 .post-list {
 	margin-left: -9px;
-    margin-right: calc(100% - 67.1% - 271px);
-    width: 67.2%;
+	margin-right: calc(100% - 67.1% - 271px);
+	width: 67.2%;
 }
 
 .post-list-item {
@@ -1074,8 +1076,8 @@ h2 .trend-title-link {
 
 	.post-list {
 		margin-left: 0px;
-    	margin-right: 30px;
-    	width: auto;
+		margin-right: 30px;
+		width: auto;
 	}
 
 	.post-list-item {
@@ -1113,6 +1115,7 @@ h2 .trend-title-link {
 	.date-author-music {
 		margin-bottom: 28px;
 	}
+
 	.text {
 		padding-right: 7px;
 	}
@@ -1131,12 +1134,13 @@ h2 .trend-title-link {
 	}
 
 	.post-list-item {
-		
+
 		margin: 35px 0px 36px 0px;
 		padding-bottom: 17px;
 		flex-wrap: wrap;
 		border-bottom: 3px solid #ededed;
 	}
+
 	.post-list-item:nth-child(1) {
 		margin-top: 40px;
 	}
@@ -1434,16 +1438,12 @@ h2 .trend-title-link {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-	
-	
+
+
 	.side-bar-title-new-post {
 		margin: -3px 0px 44px 5px;
 	}
 
-	.mailing-title {
-		padding-right: 9px;
-	}
-	
 	.latest-posts {
 		margin-bottom: 59px;
 		margin-left: 2px;
@@ -1459,32 +1459,47 @@ h2 .trend-title-link {
 	}
 
 	.search-field {
-		width: 80%;
+		width: calc(100% - 48px);
+		padding: 16px;
+
+	}
+
+	.mailing-title {
+		padding-right: 6px;
+		margin-bottom: 36px;
 	}
 
 	.email-field {
-		width: 97%;
-		margin-left: 2px;
+		width: 100%;
+		margin-left: 0px;
 	}
 
 	.subscribe-btn {
-		width: 96.4%;
-		margin-left: 2px;
+		width: 100%;
+		margin-bottom: 61px;
 		font-size: 0.85rem;
 		font-weight: 700;
 	}
 
+	.tags-list {
+		margin-bottom: 50px;
+	}
+
 	.tags-title {
-		padding-right: 6px;
+		padding-right: 2px;
 	}
 
 	.tags-list-item {
-		margin: 0px 9px 6px 4px;
-    	padding: 1px 11px 3px 9px;
+		margin: -1px 6px 7px 4px;
+		padding: 1px 11px 4px 10px;
+	}
+
+	.tags-list-item:nth-child(3) {
+		padding: 1px 8px 4px 13px;
 	}
 
 	.latest-post-img {
-		margin-right: 18px;
+		margin-right: 17px;
 	}
 
 	.side-bar-title-themes {
@@ -1492,14 +1507,12 @@ h2 .trend-title-link {
 	}
 
 	.theme-list-item {
-		padding: 12px 4px;
+		padding: 12px 2px;
 	}
 
-	.theme-list-item:nth-child(4) {
-
+	.theme-list-item:nth-child(6) {
+		padding: 13px 2px;
 	}
-	
-
 }
 
 
@@ -1566,7 +1579,7 @@ h2 .trend-title-link {
 	flex-direction: column;
 	max-width: 1200px;
 	padding: 0 30px;
-    margin: 0 auto;
+	margin: 0 auto;
 	margin-bottom: 5px;
 	width: 100%;
 }
@@ -1647,7 +1660,7 @@ h2 .trend-title-link {
 	padding: 36px 21px 24px 21px;
 	margin-top: -33px;
 	margin-right: -4px;
-    margin-left: -4px;
+	margin-left: -4px;
 	border: 3px solid #b59f5b;
 }
 
@@ -1687,36 +1700,43 @@ h2 .trend-title-link {
 	.products {
 		padding: 0;
 	}
+
 	.products-cards {
 		justify-content: space-between;
 		margin-left: 11px;
-    	margin-right: 62px;
+		margin-right: 62px;
 	}
+
 	.product-card {
-		max-width: 43%;
+		margin-left: 28px;
+		flex-basis: 43%;
 	}
+
 	.product-title {
-		padding-right: 20px;
-		margin: 0px -21px 42px 0;
+		margin: 0px 0px 42px 0;
 		font-size: 1.1rem;
 	}
+
 	.product-title::after {
 		right: 20px;
 	}
 
-
-	.product-card:nth-child(2) {
-		margin-left: 50px;
+	.product-card:nth-child(2) .product-card-image {
+		margin-left: -8px;
 	}
 
 	.product-card:nth-child(n + 3) {
 		margin-top: 28px;
 	}
 
-	.product-card-image {
+	/* .product-card-image {
 		margin-left: 18px;
-    	max-width: 291px;
-    	width: 100%;
+	} */
+
+	.product-img {
+		margin-left: 18px;
+		max-width: 291px;
+		width: 100%;
 	}
 
 	.product-card-title {
@@ -1725,15 +1745,21 @@ h2 .trend-title-link {
 	}
 
 	.product-card-price {
-		flex-basis: 204px;
-		padding: 33px 13px 18px 19px;
+		flex-grow: 1;
+		padding: 36px 19px 24px 16px;
 		margin-top: -36px;
-		margin-right: -24px;
+		margin-right: -33px;
+	}
+
+	.product-card:nth-child(2) .product-card-price {
+		margin-top: -36px;
+		margin-right: -29px;
+		margin-left: -11px;
+		padding: 35px 25px 24px 16px;
 	}
 
 	.product-card-price-frame {
-		flex-basis: 186px;
-		padding: 37px 13px 18px 19px;
+		padding: 40px 18px 25px 19px;
 		margin-top: -41px;
 	}
 }
@@ -1749,6 +1775,7 @@ h2 .trend-title-link {
 		margin: 49px 0px 38px -2px;
 		font-size: 1rem;
 	}
+
 	.products-cards {
 		display: flex;
 		flex-wrap: wrap;
@@ -1761,10 +1788,12 @@ h2 .trend-title-link {
 		margin-bottom: 22px;
 	}
 
-	
+
 	.product-card-image {
 		margin-left: 19px;
 	}
+
+
 
 	.product-card-price {
 		/* flex-basis: 167px; */
@@ -1851,6 +1880,7 @@ h2 .trend-title-link {
 	.socials-list {
 		margin-left: 5px;
 	}
+
 	.copyright {
 		margin: 42px -10px 41px 0;
 	}
